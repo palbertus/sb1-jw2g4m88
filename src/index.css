@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Console styling */
+.console-entry {
+  padding: 12px;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.console-entry:last-child {
+  border-bottom: none;
+}
+
+.console-timestamp {
+  color: #9CA3AF;
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+}
+
+.console-message {
+  color: #E5E7EB;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.console-json {
+  background: rgba(17, 24, 39, 0.5);
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(229, 231, 235, 0.1);
+}
+
+/* JSON syntax highlighting */
+.json-key {
+  color: #93C5FD; /* blue-300 */
+  font-weight: 500;
+}
+
+.json-string {
+  color: #6EE7B7; /* emerald-300 */
+}
+
+.json-number {
+  color: #FCD34D; /* amber-300 */
+}
+
+.json-boolean {
+  color: #F472B6; /* pink-400 */
+  font-weight: 500;
+}
+
+.json-null {
+  color: #EF4444; /* red-500 */
+  font-style: italic;
+}
+
+/* Scrollbar styling */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #1F2937;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #4B5563;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #6B7280;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
